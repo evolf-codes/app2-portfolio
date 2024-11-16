@@ -11,8 +11,7 @@ def send_email(message):
     # Retrieve email credentials securely from st.secrets
     username = st.secrets["GMAIL_USER"]
     email_password = st.secrets["EMAIL_PASSWORD"]
-
-    receiver = "receiver-email@example.com"  # Replace with the receiver's email address
+    receiver = st.secrets["GMAIL_USER"]  # Replace with the receiver's email address
 
     # Create a secure SSL context
     context = ssl.create_default_context()
